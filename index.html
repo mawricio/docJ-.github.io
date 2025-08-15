@@ -129,6 +129,30 @@
         </div>
     </div>
 </section>
+<form id="docForm">
+  <input type="text" name="NOME_CLIENTE" placeholder="Nome do Cliente" required>
+  <input type="text" name="DATA" placeholder="Data" required>
+  <input type="text" name="VALOR" placeholder="Valor" required>
+  <button type="submit">Gerar Documento</button>
+</form>
+
+<script>
+document.getElementById('docForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const formData = Object.fromEntries(new FormData(e.target).entries());
+  const response = await fetch('http://SEU_SERVIDOR:3000/generate', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
+  });
+  const blob = await response.blob();
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'documento.pdf';
+  link.click();
+});
+</script>
+
 
 <section class="highlight">
     <h2>Plano Premium</h2>
@@ -142,3 +166,4 @@
 
 </body>
 </html>
+
