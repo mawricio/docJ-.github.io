@@ -5,24 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DocJá - Gere Documentos Online</title>
 <style>
-  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-  header { background: linear-gradient(90deg, #007BFF, #00C6FF); padding: 1rem; color: white; text-align: center; }
-  main { max-width: 600px; margin: auto; padding: 1rem; }
-  .card { background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 1rem; }
-  select, input, button { width: 100%; padding: 0.7rem; margin: 0.5rem 0; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem; }
-  button { background: #007BFF; color: white; border: none; cursor: pointer; }
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #ffffff; color: #333; }
+  header { background: #007BFF; padding: 1rem; color: white; text-align: center; }
+  main { max-width: 800px; margin: auto; padding: 1rem; }
+  section { margin-bottom: 2rem; }
+  label, select, textarea, button { display: block; width: 100%; margin-top: 0.5rem; }
+  textarea, select { padding: 0.5rem; font-size: 1rem; }
+  button { margin-top: 1rem; padding: 0.7rem; font-size: 1rem; background: #007BFF; color: white; border: none; cursor: pointer; }
   button:hover { background: #0056b3; }
-  footer { text-align: center; font-size: 0.8rem; padding: 1rem; color: #666; }
+  footer { text-align: center; font-size: 0.9rem; padding: 1rem; background: #f0f0f0; }
 </style>
 </head>
 <body>
 <header>
   <h1>📄 DocJá</h1>
-  <p>Gere seus documentos em minutos</p>
+  <p>Crie documentos prontos para uso em poucos cliques</p>
 </header>
 <main>
-  <div class="card">
-    <label for="modelo">Escolha o tipo de documento:</label>
+  <section>
+    <h2>Gerador de Documentos</h2>
+    <label for="modelo">Tipo de documento:</label>
     <select id="modelo">
       <option>Contrato de prestação de serviços</option>
       <option>Contrato de compra e venda</option>
@@ -32,10 +34,10 @@
       <option>Autorização de viagem para menor</option>
       <option>Pedido de demissão</option>
     </select>
-    <label for="dados">Preencha os dados:</label>
-    <textarea id="dados" rows="6" placeholder="Nome, CPF, endereço, etc..."></textarea>
+    <label for="dados">Informações necessárias:</label>
+    <textarea id="dados" rows="6" placeholder="Digite aqui nome, CPF, endereço, etc..."></textarea>
     <button onclick="gerarDocumento()">Gerar Documento</button>
-  </div>
+  </section>
 </main>
 <footer>
   DocJá © 2025 - Todos os direitos reservados
