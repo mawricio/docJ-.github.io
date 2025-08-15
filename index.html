@@ -3,56 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DocJá - Gere Documentos Online</title>
+<title>DocJá - Documentos Prontos em 1 Minuto</title>
 <style>
-  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #ffffff; color: #333; }
-  header { background: #007BFF; padding: 1rem; color: white; text-align: center; }
-  main { max-width: 800px; margin: auto; padding: 1rem; }
-  section { margin-bottom: 2rem; }
-  label, select, textarea, button { display: block; width: 100%; margin-top: 0.5rem; }
-  textarea, select { padding: 0.5rem; font-size: 1rem; }
-  button { margin-top: 1rem; padding: 0.7rem; font-size: 1rem; background: #007BFF; color: white; border: none; cursor: pointer; }
-  button:hover { background: #0056b3; }
-  footer { text-align: center; font-size: 0.9rem; padding: 1rem; background: #f0f0f0; }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+    header {
+        background-color: #0066ff;
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    header h1 {
+        font-size: 2.2em;
+        margin-bottom: 10px;
+    }
+    header p {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+    header a {
+        background: #ffcc00;
+        color: #000;
+        padding: 15px 25px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    section {
+        max-width: 1100px;
+        margin: auto;
+        padding: 40px 20px;
+    }
+    .steps, .models {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+    .card h3 {
+        margin-bottom: 10px;
+        color: #0066ff;
+    }
+    .btn {
+        display: inline-block;
+        margin-top: 10px;
+        background: #0066ff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .highlight {
+        background: #ffcc00;
+        padding: 40px 20px;
+        text-align: center;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #eee;
+        font-size: 0.9em;
+    }
 </style>
 </head>
 <body>
+
 <header>
-  <h1>📄 DocJá</h1>
-  <p>Crie documentos prontos para uso em poucos cliques</p>
+    <h1>Documentos Prontos e Personalizados em 60 Segundos</h1>
+    <p>Contratos, declarações e formulários editáveis para download imediato em PDF ou Word.</p>
+    <a href="#modelos">Gerar Documento Agora</a>
 </header>
-<main>
-  <section>
-    <h2>Gerador de Documentos</h2>
-    <label for="modelo">Tipo de documento:</label>
-    <select id="modelo">
-      <option>Contrato de prestação de serviços</option>
-      <option>Contrato de compra e venda</option>
-      <option>Declaração de residência</option>
-      <option>Recibo de pagamento</option>
-      <option>Declaração escolar</option>
-      <option>Autorização de viagem para menor</option>
-      <option>Pedido de demissão</option>
-    </select>
-    <label for="dados">Informações necessárias:</label>
-    <textarea id="dados" rows="6" placeholder="Digite aqui nome, CPF, endereço, etc..."></textarea>
-    <button onclick="gerarDocumento()">Gerar Documento</button>
-  </section>
-</main>
+
+<section>
+    <h2>Como Funciona</h2>
+    <div class="steps">
+        <div class="card">
+            <h3>1. Escolha o modelo</h3>
+            <p>Selecione entre dezenas de contratos e declarações prontos para editar.</p>
+        </div>
+        <div class="card">
+            <h3>2. Preencha os campos</h3>
+            <p>Insira nome, datas, valores e informações necessárias.</p>
+        </div>
+        <div class="card">
+            <h3>3. Baixe pronto</h3>
+            <p>Receba seu documento finalizado em PDF e Word na hora.</p>
+        </div>
+    </div>
+</section>
+
+<section id="modelos">
+    <h2>Modelos Mais Usados</h2>
+    <div class="models">
+        <div class="card">
+            <h3>Contrato de Prestação de Serviço</h3>
+            <a class="btn" href="#">Gerar Agora</a>
+        </div>
+        <div class="card">
+            <h3>Declaração de Residência</h3>
+            <a class="btn" href="#">Gerar Agora</a>
+        </div>
+        <div class="card">
+            <h3>Pedido de Demissão</h3>
+            <a class="btn" href="#">Gerar Agora</a>
+        </div>
+        <div class="card">
+            <h3>Declaração Escolar</h3>
+            <a class="btn" href="#">Gerar Agora</a>
+        </div>
+        <div class="card">
+            <h3>Recibo de Pagamento</h3>
+            <a class="btn" href="#">Gerar Agora</a>
+        </div>
+    </div>
+</section>
+
+<section class="highlight">
+    <h2>Plano Premium</h2>
+    <p>Baixe grátis com marca d’água ou desbloqueie todos os modelos sem marca por apenas <strong>R$ 9,90/mês</strong>.</p>
+    <a class="btn" href="#">Assinar Agora</a>
+</section>
+
 <footer>
-  DocJá © 2025 - Todos os direitos reservados
+    <p>© 2025 DocJá - Todos os direitos reservados | <a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
 </footer>
-<script>
-function gerarDocumento() {
-  const modelo = document.getElementById('modelo').value;
-  const dados = document.getElementById('dados').value;
-  const conteudo = `Modelo: ${modelo}\n\n${dados}`;
-  const blob = new Blob([conteudo], { type: 'text/plain;charset=utf-8' });
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = modelo + '.txt';
-  link.click();
-}
-</script>
+
 </body>
 </html>
